@@ -6,7 +6,7 @@ class MyComponent extends React.Component {
         address: 'Cao Lanh',
         age: '21'
     };
-    handleClick = (event) => {
+    handleClick(event) {
         console.log('Leo dz')
         console.log(' My name is', this.state.name)
         this.setState({
@@ -14,9 +14,15 @@ class MyComponent extends React.Component {
             age: 18
         })
     }
-    handleOnMoverOver(event) {
-        console.log(event.pageX)
-
+    handleOnChangeInput = (event) => {
+        this.setState({
+            name: event.target.value
+        })
+    }
+    handleSubmit = (event) => {
+        // hàm ngăn loading lại trang
+        event.preventDefault();
+        alert("me")
     }
     // JSX
     render() {
@@ -25,8 +31,11 @@ class MyComponent extends React.Component {
                 {/* Leo đẹp trai */}
                 My name is {this.state.name} and I'm {this.state.age}
                 <div>
-                    <button onClick={this.handleClick}>Click me</button>
-                    <button onMouseOver={this.handleOnMoverOver}>Hover me</button>
+                    <button onClick={(event) => { this.handleClick(event) }}>Click me</button>
+                    <form onSubmit={(event) => this.handleSubmit(event)}>
+                        <input type="text" onChange={(event) => this.handleOnChangeInput(event)} />
+                        <button>Submit</button>
+                    </form>
                 </div>
             </div>
         )
