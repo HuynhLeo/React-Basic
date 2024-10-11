@@ -34,27 +34,6 @@ class DisplayInfor extends React.Component {
                                 </div>
                             )
 
-
-
-
-                            // if (+user.age > 21) {
-                            //     return (
-                            //         <div key={user.id} className="green">
-                            //             <div>My name's {user.name} </div>
-                            //             <div>My age {user.age}</div>
-                            //             <hr />
-                            //         </div>
-                            //     )
-                            // } else {
-                            //     return (
-                            //         <div key={user.id} className="red">
-                            //             <div>My name's {user.name} </div>
-                            //             <div>My age {user.age}</div>
-                            //             <hr />
-                            //         </div>
-                            //     )
-                            // }
-
                         })}
 
 
