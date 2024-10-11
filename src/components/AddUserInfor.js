@@ -27,15 +27,11 @@ class AddUserInfor extends React.Component {
             age: this.state.age
         });
     }
-    handleClick = (event) => {
-        alert("me")
-    }
     render() {
         return (
             <div>
                 My name is {this.state.name} and I'm {this.state.age}
                 <div>
-                    <button onClick={(event) => { this.handleClick(event) }}>Click me</button>
                     <form onSubmit={(event) => this.handleSubmit(event)}>
                         <label>Your Name: </label>
                         <input
